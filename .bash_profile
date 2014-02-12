@@ -8,4 +8,9 @@ source $HOME/.aliases
 nvm use default
 
 ## loads rbenv
+### win
 source /etc/profile.d/rbenv.sh
+### mac
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="$HOME/.rbenv/shims:$PATH"
+# eval "$(rbenv init -)"
