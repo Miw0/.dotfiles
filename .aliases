@@ -25,7 +25,3 @@ alias nyan="TERM=ansi telnet nyancat.dakko.us"
 alias reshell="exec $SHELL -l"
 alias please="sudo"
 alias assin="php app/console assets:install --symlink public"
-
-JQUERY="~/jquery-git.js"
-URL="http://code.jquery.com/jquery-git.js"
-alias jquery="rm -f $JQUERY; wget -O $JQUERY $URL || curl $URL --output $JQUERY"
