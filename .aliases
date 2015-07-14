@@ -15,7 +15,6 @@ alias ..5="cd ../../../../.." # 5 dirs up
 alias svnignore="svn propedit svn:ignore ."
 
 # gems
-alias gunall="gem list | cut -d" " -f1 | xargs gem uninstall -aIx"
 alias bundle="rbenv exec bundle"
 alias biv="bundle install --path=vendor"
 alias cowa="bundle exec compass watch"
