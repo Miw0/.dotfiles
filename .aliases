@@ -16,11 +16,15 @@ alias svnignore="svn propedit svn:ignore ."
 
 # gems
 alias bundle="rbenv exec bundle"
-alias biv="bundle install --path=vendor"
 alias cowa="bundle exec compass watch"
+
+# install assets
+alias assin="php app/console assets:install --symlink public"
+alias npmi="npm install"
+alias boi="bower install"
+alias biv="bundle install --path=vendor"
 
 # random
 alias nyan="TERM=ansi telnet nyancat.dakko.us"
 alias reshell="exec $SHELL -l"
 alias please="sudo"
-alias assin="php app/console assets:install --symlink public"
