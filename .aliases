@@ -19,9 +19,7 @@ alias svnignore="svn propedit svn:ignore ."
 # git
 alias gpull="git pull"
 alias gadd="git add"
-alias gadd.="git add ."
-alias gco="git commit -m"
-alias gcoa="git commit -am"
+alias gcom="git commit"
 alias gstat="git status"
 
 # gems
