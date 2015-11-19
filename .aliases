@@ -16,6 +16,13 @@ alias ..6="cd ../../../../../.." # 6 dirs up
 # svn
 alias svnignore="svn propedit svn:ignore ."
 
+# git
+alias gpull="git pull"
+alias gadd="git add"
+alias gadd.="git add ."
+alias gco="git commit -m"
+alias gcoa="git commit -am"
+
 # gems
 alias bundle="rbenv exec bundle"
 alias cowa="bundle exec compass watch"
