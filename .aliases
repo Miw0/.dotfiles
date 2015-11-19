@@ -22,6 +22,7 @@ alias gadd="git add"
 alias gadd.="git add ."
 alias gco="git commit -m"
 alias gcoa="git commit -am"
+alias gstat="git status"
 
 # gems
 alias bundle="rbenv exec bundle"
