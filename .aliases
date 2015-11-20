@@ -16,13 +16,6 @@ alias ..6="cd ../../../../../.." # 6 dirs up
 # svn
 alias svnignore="svn propedit svn:ignore ."
 
-# git
-alias gpull="git pull"
-alias gpush="git push"
-alias gadd="git add"
-alias gcom="git commit"
-alias gstat="git status"
-
 # gems
 alias bundle="rbenv exec bundle"
 alias cowa="bundle exec compass watch"
@@ -38,3 +31,6 @@ alias nyan="TERM=ansi telnet nyancat.dakko.us"
 alias reshell="exec $SHELL -l"
 alias please="sudo"
 alias rm="rm -i"
+
+# project
+alias dentunnel="ssh -L 8091:dental-esb01-q.dbgruppe.lan:8091 eshopqadmin@192.168.200.215 -N"
