@@ -10,6 +10,8 @@ source $ZSH/oh-my-zsh.sh
 # sets aliases
 source $HOME/.aliases
 
+PATH=$PATH:~/bin
+
 # loads rbenv
 source /etc/profile.d/rbenv.sh
 
