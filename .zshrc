@@ -14,4 +14,4 @@ source $HOME/.aliases
 source /etc/profile.d/rbenv.sh
 
 # start in project dir
-cd projects
+cd ~/projects
