@@ -21,7 +21,7 @@ alias bundle="rbenv exec bundle"
 alias cowa="bundle exec compass watch"
 
 # install assets
-alias assin="php app/console assets:install --symlink public"
+alias assin="php app/console assets:install --symlink"
 alias npmi="npm install"
 alias boi="bower install"
 alias biv="bundle install --path=vendor"
@@ -31,6 +31,4 @@ alias nyan="TERM=ansi telnet nyancat.dakko.us"
 alias reshell="exec $SHELL -l"
 alias please="sudo"
 alias rm="rm -i"
-
-# project
-alias dentunnel="ssh -L 8091:dental-esb01-q.dbgruppe.lan:8091 eshopqadmin@192.168.200.215 -N"
+alias imgop="cd ~/_imgoptimize; rm -rf _compressed/; compressimages; -";
