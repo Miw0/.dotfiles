@@ -13,22 +13,8 @@ alias ..4="cd ../../../.." # 4 dirs up
 alias ..5="cd ../../../../.." # 5 dirs up
 alias ..6="cd ../../../../../.." # 6 dirs up
 
-# svn
-alias svnignore="svn propedit svn:ignore ."
-
-# gems
-alias bundle="rbenv exec bundle"
-alias cowa="bundle exec compass watch"
-
-# install assets
-alias assin="php app/console assets:install --symlink"
-alias npmi="npm install"
-alias boi="bower install"
-alias biv="bundle install --path=vendor"
-
 # random
 alias nyan="TERM=ansi telnet nyancat.dakko.us"
 alias reshell="exec $SHELL -l"
 alias please="sudo"
 alias rm="rm -i"
-alias imgop="cd ~/_imgoptimize; rm -rf _compressed/; compressimages; -";
