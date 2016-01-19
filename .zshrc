@@ -13,4 +13,3 @@ source $ZSH/oh-my-zsh.sh
 
 # sets aliases
 source $HOME/.aliases-basic
-source $HOME/.aliases-eos
