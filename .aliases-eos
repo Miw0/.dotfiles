@@ -1,7 +1,0 @@
-# elementary os
-alias explorer="pantheon-files"
-alias install="sudo apt-get install"
-alias remove="sudo apt-get remove"
-alias update="sudo apt-get update"
-alias purge="sudo apt-get purge"
-alias autoremove="sudo apt-get autoremove"
