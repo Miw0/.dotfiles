@@ -1,0 +1,20 @@
+# dir
+alias ll="ls -alF"
+alias -- -="cd -" # 1 location back
+alias -2="cd -2" # 2 locations back
+alias -3="cd -3" # 3 locations back
+alias -4="cd -4" # 4 locations back
+alias -5="cd -5" # 5 locations back
+alias -6="cd -6" # 6 locations back
+alias ..="cd .." # 1 dir up
+alias ..2="cd ../.." # 2 dirs up
+alias ..3="cd ../../.." # 3 dirs up
+alias ..4="cd ../../../.." # 4 dirs up
+alias ..5="cd ../../../../.." # 5 dirs up
+alias ..6="cd ../../../../../.." # 6 dirs up
+
+# random
+alias nyan="TERM=ansi telnet nyancat.dakko.us"
+alias reshell="exec $SHELL -l"
+alias please="sudo"
+alias rm="rm -i"
