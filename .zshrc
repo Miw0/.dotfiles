@@ -1,6 +1,6 @@
 # configure oh-my-zsh
 export ZSH=/home/miw0/.oh-my-zsh
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 ZSH=$HOME/.oh-my-zsh
 
 # set zsh settings
