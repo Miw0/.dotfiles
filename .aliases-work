@@ -1,3 +1,18 @@
+# dir
+alias ll="ls -alF"
+alias -- -="cd -" # 1 location back
+alias -2="cd -2" # 2 locations back
+alias -3="cd -3" # 3 locations back
+alias -4="cd -4" # 4 locations back
+alias -5="cd -5" # 5 locations back
+alias -6="cd -6" # 6 locations back
+alias ..="cd .." # 1 dir up
+alias ..2="cd ../.." # 2 dirs up
+alias ..3="cd ../../.." # 3 dirs up
+alias ..4="cd ../../../.." # 4 dirs up
+alias ..5="cd ../../../../.." # 5 dirs up
+alias ..6="cd ../../../../../.." # 6 dirs up
+
 # svn
 alias svnignore="svn propedit svn:ignore ."
 
@@ -12,4 +27,28 @@ alias boi="bower install"
 alias biv="bundle install --path=vendor"
 
 # random
+alias nyan="TERM=ansi telnet nyancat.dakko.us"
+alias reshell="exec $SHELL -l"
+alias please="sudo"
+alias rm="rm -i"
 alias imgop="cd ~/_imgoptimize; rm -rf _compressed/; compressimages; -";
+
+# EM Random Image Server
+EM_RANDOM_IMAGE_SERVER_PATH="/var/www/projects/random-image.em.lan";
+alias eis-dir="cd $EM_RANDOM_IMAGE_SERVER_PATH";
+alias eis-change="php $EM_RANDOM_IMAGE_SERVER_PATH/scripts/change.php";
+eis-new () {
+    if [ $# -eq 0 ]; then
+        echo "\u2718 ERROR: You failed to provide a file ... "
+        echo ""
+        sleep 3
+        echo "So now you have to watch nyan cat \u2665! har har har"
+        sleep 2
+        nyan
+    else
+        mv $1 "$EM_RANDOM_IMAGE_SERVER_PATH/pics"
+        if [ $? -eq 0 ]; then
+            echo "\u2714 Image '$1' successfully added to random-image.em.lan queue"
+        fi
+    fi
+}
