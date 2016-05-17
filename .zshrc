@@ -1,15 +1,24 @@
-# configure oh-my-zsh
-export ZSH=/home/miw0/.oh-my-zsh
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 ZSH=$HOME/.oh-my-zsh
 
-# set zsh settings
-ZSH_THEME="ys"
+ZSH_THEME="miw0"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git)
+plugins=(git composer phing wwwhome svn-fast-info)
 
 # load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # sets aliases
 source $HOME/.aliases-basic
+
+# job related settings
+# source $HOME/.aliases-job
+# PATH=$PATH:~/bin
+# source /etc/profile.d/rbenv.sh
+# newsvn
+# source /home/mib/projects/mib.docker-runner/dockerhelper.sh
+
+# start in project dir
+$HOME=~/projects/
+if [ -d "$HOME" ]; then
+  cd $HOME;
+fi
