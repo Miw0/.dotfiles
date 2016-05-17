@@ -18,7 +18,7 @@ source $HOME/.aliases-basic
 # source /home/mib/projects/mib.docker-runner/dockerhelper.sh
 
 # start in project dir
-$PROJ=$HOME/projects/
+$PROJ=$HOME/projects
 if [ -d "$PROJ" ]; then
   cd $PROJ;
 fi
