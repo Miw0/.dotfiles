@@ -13,9 +13,11 @@ alias ..4="cd ../../../.." # 4 dirs up
 alias ..5="cd ../../../../.." # 5 dirs up
 alias ..6="cd ../../../../../.." # 6 dirs up
 
+# install assets
+alias npmi="npm install"
+
 # random
 alias nyan="TERM=ansi telnet nyancat.dakko.us"
 alias reshell="exec $SHELL -l"
 alias please="sudo"
 alias rm="rm -i"
-alias fuck="eval $(thefuck --alias)"
