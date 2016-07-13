@@ -14,7 +14,7 @@ alias ..5="cd ../../../../.." # 5 dirs up
 alias ..6="cd ../../../../../.." # 6 dirs up
 
 # install assets
-alias npmi="npm install"
+alias npmls="npm ls --depth=0"
 
 # random
 alias nyan="TERM=ansi telnet nyancat.dakko.us"
