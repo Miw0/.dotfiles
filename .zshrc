@@ -15,7 +15,6 @@ source $HOME/.aliases-basic
 # PATH=$PATH:~/bin
 # source /etc/profile.d/rbenv.sh
 # newsvn
-# source /home/mib/projects/mib.docker-runner/dockerhelper.sh
 
 # start in project dir
 if [ -d "$HOME/projects" ]; then
