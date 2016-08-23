@@ -12,6 +12,7 @@ alias biv="bundle install --path=vendor"
 
 # random
 alias imgop="cd ~/_imgoptimize; rm -rf _compressed/; compressimages; -";
+alias getdaily="./copyDbByParameters.sh -i daily_copy";
 
 # EM Random Image Server
 EM_RANDOM_IMAGE_SERVER_PATH="/var/www/projects/random-image.em.lan";
