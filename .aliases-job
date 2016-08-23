@@ -6,7 +6,6 @@ alias bundle="rbenv exec bundle"
 alias cowa="bundle exec compass watch"
 
 # install assets
-alias assin="php app/console assets:install --symlink"
 alias boi="bower install"
 alias biv="bundle install --path=vendor"
 
