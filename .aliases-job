@@ -1,34 +1,50 @@
 # svn
-alias svnignore="svn propedit svn:ignore ."
+alias svnignore="svn propedit svn:ignore .";
 
 # gems
-alias bundle="rbenv exec bundle"
-alias cowa="bundle exec compass watch"
+alias bundle="rbenv exec bundle";
+alias cowa="bundle exec compass watch";
 
 # install assets
-alias boi="bower install"
-alias biv="bundle install --path=vendor"
+alias boi="bower install";
+alias biv="bundle install --path=vendor";
 
 # random
-alias imgop="cd ~/_imgoptimize; rm -rf _compressed/; compressimages; -";
+PROJ_DIR="$HOME/projects";
 alias getdaily="./copyDbByParameters.sh -i daily_copy";
 
+# Image optimization
+IMG_OP_DIR="$HOME/_imgoptimize";
+imgop () {
+    if [ $1 ]; then
+        mv $1 $IMG_OP_DIR;
+    fi
+
+    cd $IMG_OP_DIR;
+    rm -rf _compressed/;
+    compressimages;
+    cd -;
+}
+
 # EM Random Image Server
-EM_RANDOM_IMAGE_SERVER_PATH="/var/www/projects/random-image.em.lan";
-alias eis-dir="cd $EM_RANDOM_IMAGE_SERVER_PATH";
-alias eis-change="php $EM_RANDOM_IMAGE_SERVER_PATH/scripts/change.php";
+EIS_DIR="/var/www/projects/random-image.em.lan";
+alias eis-change="php $EIS_DIR/scripts/change.php";
 eis-new () {
     if [ $# -eq 0 ]; then
-        echo "\u2718 ERROR: You failed to provide a file ... "
-        echo ""
-        sleep 3
-        echo "So now you have to watch nyan cat \u2665! har har har"
-        sleep 2
-        nyan
+        echo "\u2718 ERROR: You failed to provide a file ... ";
+        echo "";
+        sleep 3;
+        echo "So now you have to watch nyan cat \u2665! har har har";
+        sleep 2;
+        nyan;
     else
-        mv $1 "$EM_RANDOM_IMAGE_SERVER_PATH/pics"
+        imgop;
+        mv $1 "$EIS_DIR/pics";
+
         if [ $? -eq 0 ]; then
-            echo "\u2714 Image '$1' successfully added to random-image.em.lan queue"
+            echo "\u2714 Image '$1' successfully added to random-image.em.lan queue";
         fi
+
+        cd $PROJ_DIR;
     fi
 }
