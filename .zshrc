@@ -2,7 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="miw0"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git composer phing wwwhome svn-fast-info)
+plugins=(git)
 
 # load oh-my-zsh
 source $ZSH/oh-my-zsh.sh

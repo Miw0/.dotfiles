@@ -27,24 +27,4 @@ imgop () {
 }
 
 # EM Random Image Server
-EIS_DIR="/var/www/projects/random-image.em.lan";
-alias eis-change="php $EIS_DIR/scripts/change.php";
-eis-new () {
-    if [ $# -eq 0 ]; then
-        echo "\u2718 ERROR: You failed to provide a file ... ";
-        echo "";
-        sleep 3;
-        echo "So now you have to watch nyan cat \u2665! har har har";
-        sleep 2;
-        nyan;
-    else
-        imgop;
-        mv $1 "$EIS_DIR/pics";
-
-        if [ $? -eq 0 ]; then
-            echo "\u2714 Image '$1' successfully added to random-image.em.lan queue";
-        fi
-
-        cd $PROJ_DIR;
-    fi
-}
+alias eis-change="php /var/www/projects/random-image.em.lan/scripts/change.php";
