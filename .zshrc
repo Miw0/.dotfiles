@@ -1,4 +1,4 @@
-ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="miw0"
 COMPLETION_WAITING_DOTS="true"
@@ -17,6 +17,6 @@ source $HOME/.aliases-basic
 # newsvn
 
 # start in project dir
-if [ -d "$HOME/projects" ]; then
-  cd $HOME/projects;
-fi
+# if [ -d "$HOME/projects" ]; then
+  # cd $HOME/projects;
+# fi
