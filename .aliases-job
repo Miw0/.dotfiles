@@ -13,7 +13,23 @@ alias biv="bundle install --path=vendor";
 # random
 PROJ_DIR="$HOME/projects";
 alias getdaily="./copyDbByParameters.sh -i daily_copy";
-alias swi="php-7.1.0 ~/bin/swi.phar --shopwareCli ~/bin/sw.phar";
+
+# Shopware specific
+swdb () {
+    if [ ! -f swi.phar ]; then
+        echo "✗ No swi.phar found, sorry."
+        return false;
+    fi
+
+    php-7.1.0 swi.phar -r;
+    cd public;
+    php-7.1.0 bin/console sw:theme:dump:configuration;
+    cd themes;
+    grunt production --force;
+    cd "../../";
+    echo "✔ Shopware database recovered & frontend built."
+}
+
 # Image optimization
 IMG_OP_DIR="$HOME/_imgoptimize";
 imgop () {
