@@ -22,13 +22,24 @@ swdb () {
     fi
 
     php-7.1.0 swi.phar -r;
+    echo "✔ Shopware database recovered."
+    swf;
+}
+
+swf () {
+    if [ ! -f public/bin/console ]; then
+        echo "✗ bin/console not found, sorry."
+        return false;
+    fi
+
     cd public;
     php-7.1.0 bin/console sw:theme:dump:configuration;
+    echo "✔ Shopware theme configuration dumped."
+    echo "... starting Shopware tooling ..."
     cd themes;
-    grunt production --force;
-    cd "../../";
-    echo "✔ Shopware database recovered & frontend built."
+    grunt;
 }
+
 
 # Image optimization
 IMG_OP_DIR="$HOME/_imgoptimize";

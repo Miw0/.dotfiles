@@ -12,7 +12,7 @@ source $HOME/.aliases-basic
 
 # job related settings
 # source $HOME/.aliases-job
-# PATH=$PATH:~/bin
+# PATH=~/bin:$PATH
 # source /etc/profile.d/rbenv.sh
 # newsvn
 
