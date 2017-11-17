@@ -45,15 +45,12 @@ foreach ($code as $codeElement) {
 
         $worktime = $diffTime->diff($totalTime);
 
-        echo 'Arbeitszeit: ' . $worktime->format("%H:%I") . ' Std' . PHP_EOL;
-
         if($worktime->format('%H') >= 8) {
             echo 'FEIERABEND!' . PHP_EOL;
         } else {
             $hoursToGo = 7 - $worktime->format('%H');
             $minutesToGo = 60 - $worktime->format('%I');
 
-            echo 'Verbleibend: ' . str_pad($hoursToGo, 2, '0', STR_PAD_LEFT) . ':' . str_pad($minutesToGo, 2, '0', STR_PAD_LEFT) . ' Std' . PHP_EOL;
             $timeTillEnd = new DateInterval('P0D');
             $timeTillEnd->h = $hoursToGo;
             $timeTillEnd->i = $minutesToGo;
@@ -61,7 +58,10 @@ foreach ($code as $codeElement) {
             $currentDate = new DateTime();
 
             echo 'Feierabend: '  . $currentDate->add($timeTillEnd)->format('H:i') . ' Uhr' . PHP_EOL;
+            echo 'Verbleibend: ' . str_pad($hoursToGo, 2, '0', STR_PAD_LEFT) . ':' . str_pad($minutesToGo, 2, '0', STR_PAD_LEFT) . ' Std' . PHP_EOL;
         }
+
+        echo 'Arbeitszeit: ' . $worktime->format("%H:%I") . ' Std' . PHP_EOL;
     }
 
 }
