@@ -16,6 +16,14 @@ alias ..6="cd ../../../../../.." # 6 dirs up
 # install assets
 alias npmls="npm ls --depth=0"
 
+# docker
+alias dup="docker-compose up -d"
+alias ddown="docker-compose down"
+alias dps="docker ps -a"
+dexec () {
+    docker exec -it $1 zsh
+}
+
 # random
 alias nyan="TERM=ansi telnet nyancat.dakko.us"
 alias reshell="exec $SHELL -l"
