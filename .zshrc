@@ -1,4 +1,4 @@
-export ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="miw0"
 COMPLETION_WAITING_DOTS="true"
@@ -11,12 +11,10 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases-basic
 
 # job related settings
-# source $HOME/.aliases-job
-# PATH=~/bin:$PATH
-# source /etc/profile.d/rbenv.sh
-# newsvn
+source $HOME/.aliases-job
+PATH=~/bin:$PATH
 
 # start in project dir
-# if [ -d "$HOME/projects" ]; then
-  # cd $HOME/projects;
-# fi
+if [ -d "$HOME/projects" ]; then
+  cd $HOME/projects;
+fi
