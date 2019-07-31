@@ -1,29 +1,20 @@
-# svn
-alias svnignore="svn propedit svn:ignore .";
-
-# gems
-alias bundle="rbenv exec bundle";
-alias cowa="bundle exec compass watch";
-alias coca="bundle exec compass compile --force";
-
-# install assets
-alias boi="bower install";
-alias biv="bundle install --path=vendor";
-
 # random
 PROJ_DIR="$HOME/projects";
 alias getdaily="./copyDbByParameters.sh -i daily_copy";
+alias fixmssetup="php-5.3.20 -d memory_limit=-1 /usr/local/bin/composer.phar up"
 
 # Shopware specific
 swdb () {
-    if [ ! -f swi.phar ]; then
-        echo "✗ No swi.phar found, sorry."
-        return false;
-    fi
-
-    php-7.1.0 swi.phar -r;
+    swi.phar -r;
     echo "✔ Shopware database recovered."
     swf;
+}
+
+swdt () { 
+    cd public;
+    php bin/console sw:theme:dump:configuration;
+    echo "✔ Shopware theme configuration dumped."
+    cd ..;
 }
 
 swf () {
@@ -32,26 +23,11 @@ swf () {
         return false;
     fi
 
-    cd public;
-    php-7.1.0 bin/console sw:theme:dump:configuration;
-    echo "✔ Shopware theme configuration dumped."
+    swdt;
+
+    cd public/themes;
     echo "... starting Shopware tooling ..."
-    cd themes;
-    grunt;
-}
-
-
-# Image optimization
-IMG_OP_DIR="$HOME/_imgoptimize";
-imgop () {
-    if [ $1 ]; then
-        mv $1 $IMG_OP_DIR;
-    fi
-
-    cd $IMG_OP_DIR;
-    rm -rf _compressed/;
-    compressimages;
-    cd -;
+    grunt production --force;
 }
 
 # EM Random Image Server
